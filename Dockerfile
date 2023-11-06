@@ -1,10 +1,12 @@
 FROM alpine:3.13
 
-ENV OCSERV_VERSION 1.1.2
-ENV CA_CN SAMPLE CA
-ENV CA_ORG Big Corp
-ENV SRV_CN SAMPLE server
-ENV SRV_ORG MyCompany
+ENV OCSERV_VERSION 1.2.2
+ENV CA_CN binandemail
+ENV CA_ORG binandemail
+ENV SRV_CN v2.binandemail.ir
+ENV SRV_ORG binandemail
+ENV SRV_DAYS 3650
+ENV CA_DAYS 3650
 RUN set -ex \
     && apk add --no-cache --virtual .build-dependencies \
     readline-dev \
