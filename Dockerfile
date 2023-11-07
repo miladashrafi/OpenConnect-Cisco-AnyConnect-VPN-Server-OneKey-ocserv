@@ -1,5 +1,5 @@
 FROM alpine:3.13
-
+VOLUME /etc/ocserv
 ENV OCSERV_VERSION 1.2.2
 ENV CA_CN binande
 ENV CA_ORG binande
