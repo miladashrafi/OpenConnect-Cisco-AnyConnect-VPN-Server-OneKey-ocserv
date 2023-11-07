@@ -1,5 +1,4 @@
 FROM alpine:3.13
-VOLUME /etc/ocserv
 ENV OCSERV_VERSION 1.2.2
 ENV CA_CN binande
 ENV CA_ORG binande
@@ -66,6 +65,7 @@ RUN set -ex \
     && apk add --no-cache gnutls linux-pam krb5-libs libtasn1 oath-toolkit-liboath nettle libev protobuf-c musl lz4-libs libseccomp readline libnl3 iptables \
     && rm -rf /var/cache/apk/*
 WORKDIR /etc/ocserv
+VOLUME /etc/ocserv
 COPY ocserv.conf /etc/ocserv/ocserv.conf
 COPY entrypoint.sh /entrypoint.sh
 EXPOSE 443/tcp
